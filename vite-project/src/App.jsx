@@ -1,8 +1,8 @@
 import './App.css'
 import React, { useState } from 'react'
-import  { data } from '../src/data'
 import { FirstContext, SecondContext  } from './Context'
 import Header from './Header/Header'
+import { Datasheet } from './Datasheet'
 
 
 
@@ -12,7 +12,7 @@ const App = () => {
       balance: 3800, 
       expense: 1200
   });
-  const [transactionData, setTransactionData] = useState(data);
+  const [transactionData, setTransactionData] = useState(Datasheet);
   return (
   <main>
   <FirstContext.Provider value={[money, setMoney]}>
