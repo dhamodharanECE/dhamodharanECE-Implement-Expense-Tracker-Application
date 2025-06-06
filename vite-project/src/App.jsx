@@ -1,10 +1,8 @@
 import './App.css'
 import React, { useState } from 'react'
-import { FirstContext, SecondContext  } from './Context'
-import Header from './Header/Header'
 import { Datasheet } from './Datasheet'
-
-
+import { FirstContext, SecondContext } from './Context';
+import Header from './Header/Header';
 
 
 const App = () => {
@@ -15,14 +13,13 @@ const App = () => {
   const [transactionData, setTransactionData] = useState(Datasheet);
   return (
   <main>
-  <FirstContext.Provider value={[money, setMoney]}>
-    <SecondContext.Provider transactionData={transactionData} >
-      <Header balance={money.balance}  expense={money.expense} transactionData={transactionData} />
+   <FirstContext.Provider value={[money, setMoney]}>
+    <SecondContext.Provider transactionData={transactionData}>
+       <Header balance={money.balance} expense={money.expense} transactionData={transactionData}/>
     </SecondContext.Provider>
-  </FirstContext.Provider>
+   </FirstContext.Provider>
     
   </main>
   )
 }
-
-export default App
+export default App;
