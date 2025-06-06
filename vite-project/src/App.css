@@ -1,11 +1,11 @@
 
 main{
-  height: 150vh;
+  height: 100vh;
+  background-color: #3B3B3B; 
+  width: 98vw;
   overflow-y: auto;
-  background-color: #3B3B3B;
-  width: 100vw;
   padding: 1rem;
-  max-width: 1800px;
+  max-width: 1500px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
